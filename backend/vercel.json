@@ -3,7 +3,8 @@
     "builds": [{"src": "server.js", "use": "@vercel/node"}],
     "routes": [
         {
-            "src": "./backend/", "dst": "./backend/"
+            "src": "/(.*)",
+            "dest": "server.js"
         }
     ]
 }

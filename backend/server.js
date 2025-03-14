@@ -1,12 +1,15 @@
-const http = require('http');
+const express = require('express');
+const app = express();
 
-const PORT = process.env.PORT || 3000; // Use the environment port or default to 3000
+const port = process.env.PORT || 8080;
 
-const server = http.createServer((req, res) => {
-    res.writeHead(200, { 'Content-Type': 'text/plain' });
-    res.end('Hello, World! This is a simple Node.js server.\n');
+app.get('/', (req, res) => {
+  const paymentRef = req.query.payment_ref;
+  {
+    res.status("This is work Perfectly");
+  } 
 });
 
-server.listen(PORT, () => {
-    console.log(`Server is running ${PORT}`);
+app.listen(port, () => {
+  `Server is Running on port ${port}`
 });

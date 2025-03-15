@@ -19,7 +19,7 @@ const PaymentForm = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post("http://localhost:5000/api/payments/init-payment", formData);
+      const response = await axios.post("http://localhost:5000/api/v2/payments/init-payment", formData);
       window.location.href = response.data.payUrl; // Redirect to payment page
     } catch (error) {
       console.error("Payment initiation failed", error);

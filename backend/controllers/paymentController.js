@@ -27,7 +27,7 @@ const initiatePayment = async (req, res) => {
       theme: "dark",
     };
 
-    const response = await axios.post("https://api.konnect.network/payments/init-payment", paymentData, {
+    const response = await axios.post("https://api.konnect.network/api/v2/payments/init-payment", paymentData, {
       headers: {
         "x-api-key": process.env.KONNECT_API_KEY,
         "Content-Type": "application/json",

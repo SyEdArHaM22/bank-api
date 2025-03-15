@@ -1,14 +1,13 @@
-const express = require('express');
+const express = require("express");
+const cors = require("cors");
+require("dotenv").config();
+const paymentRoutes = require("./routes/paymentRoutes");
+
 const app = express();
+app.use(express.json());
+app.use(cors());
 
-const port = process.env.PORT || 8080;
+app.use("/api/payments", paymentRoutes);
 
-app.get('/', (req, res) => {
-  {
-    res.status("This is work Perfectly");
-  } 
-});
-
-app.listen(port, () => {
-  `Server is Running on port ${port}`
-});
+const PORT = process.env.PORT || 5000;
+app.listen(PORT, () => console.log(`Server running on port ${PORT}`));

@@ -9,10 +9,20 @@
   "author": "",
   "license": "ISC",
   "keywords": [],
-  "description": "",
   "dependencies": {
-    "axios": "^1.8.2",
+    "axios": "^1.8.3",
+    "body-parser": "^1.20.3",
     "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
     "express": "^4.21.2"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SyEdArHaM22/new-backend.git"
+  },
+  "bugs": {
+    "url": "https://github.com/SyEdArHaM22/new-backend/issues"
+  },
+  "homepage": "https://github.com/SyEdArHaM22/new-backend#readme",
+  "description": ""
 }
